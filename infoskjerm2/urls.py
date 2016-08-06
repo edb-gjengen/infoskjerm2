@@ -21,5 +21,5 @@ from slides.views import SlideShowView, SlidesListAPI
 urlpatterns = [
     url(r'^admin/', admin.site.urls),
     url(r'^$', SlideShowView.as_view(), name='slideshow'),
-    url(r'^slides/$', SlidesListAPI.as_view(), name='slide-list-api')
+    url(r'^api/slides/$', SlidesListAPI.as_view(), name='slide-list-api')
 ]
