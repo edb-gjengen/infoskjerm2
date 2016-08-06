@@ -1,3 +1,6 @@
 from django.test import TestCase
 
-# Create your tests here.
+
+class SlideTests(TestCase):
+    pass
+    # TODO test active slides
