@@ -1,16 +1,16 @@
-{% load staticfiles %}
+{% load static %}
 <!doctype html>
 <html>
 <head>
 	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 	<title>Slides</title>
-	<script type="text/javascript" src="{% static "vendor/jquery-3.1.0.min.js" %}"></script>
-	<script type="text/javascript" src="{% static "vendor/jquery-migrate-1.4.1.min.js" %}"></script>
-	<script type="text/javascript" src="{% static "vendor/jquery.cycle.all.min.js" %}"></script>
+	<script type="text/javascript" src="{% static "slides/vendor/jquery-3.1.0.min.js" %}"></script>
+	<script type="text/javascript" src="{% static "slides/vendor/jquery-migrate-1.4.1.min.js" %}"></script>
+	<script type="text/javascript" src="{% static "slides/vendor/jquery.cycle.all.min.js" %}"></script>
 
-    <link rel="stylesheet" href="{% static "app.css" %}">
+    <link rel="stylesheet" href="{% static "slides/app.css" %}">
 </head>
-<body style="background: black url('{% static "images/logo_dns2014_emblem_uten_tekst_hvit.png" %}') no-repeat center center;">
+<body style="background: black url('{% static "slides/images/logo_dns2014_emblem_uten_tekst_hvit.png" %}') no-repeat center center;">
     <div id="slideshow">
         <iframe class="slide"></iframe>
         <iframe class="slide"></iframe>
@@ -20,7 +20,7 @@
     <script type="text/javascript">
       var slides = {{ slides_js|safe }};
     </script>
-    <script type="text/javascript" src="{% static "app.js" %}"></script>
+    <script type="text/javascript" src="{% static "slides/app.js" %}"></script>
 
 </body>
 </html>
