@@ -11,8 +11,8 @@ class DateLimitedActivatorQuerySet(models.query.QuerySet):
     def get_date_query(self):
         today = date.today()
         return (
-            Q(activate_date__gte=today, deactivate_date__lte=today)
-            | Q(activate_date__gte=today, deactivate_date__isnull=True))
+            Q(activate_date__lte=today, deactivate_date__isnull=True)
+            | Q(activate_date__lte=today, deactivate_date__gte=today))
 
     def active(self):
         """ Returns active query set """
@@ -20,7 +20,7 @@ class DateLimitedActivatorQuerySet(models.query.QuerySet):
 
     def inactive(self):
         """ Returns inactive query set """
-        return self.filter(status=Slide.INACTIVE_STATUS).filter(Q(~self.get_date_query()))
+        return self.filter(Q(status=Slide.INACTIVE_STATUS) | Q(~self.get_date_query()))
 
 
 class DateLimitedActivatorModelManager(models.Manager):
