@@ -13,7 +13,7 @@ class SlideShowView(TemplateView):
     def get_context_data(self, **kwargs):
         serializer = SlideSerializer(Slide.objects.active(), many=True)
         context = super().get_context_data(**kwargs)
-        context['slides_js'] = mark_safe(JSONRenderer().render(serializer.data))
+        context['slides_js'] = mark_safe(JSONRenderer().render(serializer.data).decode('utf-8'))
         return context
 
 

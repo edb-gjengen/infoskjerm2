@@ -41,5 +41,5 @@ if ($("img").length) {
 /* Every 10 minutes, reload the page */
 setTimeout(function () {
     // FIXME: navigate to /
-    window.location = "http://infoskjerm.neuf.no/";
+    window.location = "https://infoskjerm.neuf.no/";
 }, 10 * 60 * 1000);
