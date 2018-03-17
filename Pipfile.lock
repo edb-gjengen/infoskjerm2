@@ -1,7 +1,7 @@
 {
     "_meta": {
         "hash": {
-            "sha256": "742fa47dd899e0c35bc367c9a22377b08296ea8482b1bd1b783071066fa52e79"
+            "sha256": "05020f63c8c988b14b38b17f5efcaba4a64149355aa09af887eeae9339dafbff"
         },
         "host-environment-markers": {
             "implementation_name": "cpython",
@@ -116,7 +116,6 @@
             "hashes": [
                 "sha256:86746b912a2cd37a54b06c694f021b0c8556d4caeab75ef50435ada152e2fbe1"
             ],
-            "markers": "python_version < '3.0'",
             "version": "==3.0.0"
         },
         "pytz": {
