@@ -23,4 +23,4 @@ def deploy():
         run('python manage.py migrate')  # Run DB migrations
 
     # Reload
-    sudo('/usr/bin/supervisorctl pid kassa.neuf.no | xargs kill -HUP', shell=False)
+    sudo('/usr/bin/supervisorctl pid infoskjerm.neuf.no | xargs kill -HUP', shell=False)
