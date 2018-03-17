@@ -1,0 +1,21 @@
+[[source]]
+
+url = "https://pypi.python.org/simple"
+verify_ssl = true
+name = "pypi"
+
+
+[dev-packages]
+
+"fabric3" = "*"
+
+
+[packages]
+
+django = "*"
+"django-admin-sortable2" = "*"
+django-auth-ldap = "*"
+django-extensions = "*"
+djangorestframework = "*"
+gunicorn = "*"
+mysqlclient = "*"
