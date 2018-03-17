@@ -14,10 +14,9 @@ def virtualenv():
 
 
 def deploy():
-    run('git pull')  # Get source
-    run('pipenv install')  # install deps in virtualenv
-
     with virtualenv():
+        run('git pull')  # Get source
+        run('pipenv install')  # install deps in virtualenv
         run('umask 022; python manage.py collectstatic --noinput')  # Collect static
         run('python manage.py migrate')  # Run DB migrations
 
